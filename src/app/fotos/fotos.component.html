@@ -1,0 +1,13 @@
+<section class="gallery-section container">
+  <h2 class="section-title">Galería de Fotos</h2>
+  <p class="section-sub">Selecciona una imagen para ver sus detalles.</p>
+
+  <div class="gallery-grid">
+    <div *ngFor="let foto of [1,2,3,4,5,6,7,8]" class="gallery-item" (click)="openRoute('/detalle/' + foto)">
+      <img src="https://placehold.co/400x300?text=Foto+{{foto}}" alt="Foto {{foto}}">
+      <div class="overlay">
+        <span>Foto {{foto}}</span>
+      </div>
+    </div>
+  </div>
+</section>

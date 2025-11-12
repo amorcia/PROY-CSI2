@@ -1,0 +1,54 @@
+.inicio-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 16px;
+}
+
+.intro-card {
+  background: var(--surface);
+  padding: 48px 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 640px;
+  animation: fadeIn 0.8s ease;
+}
+
+.intro-icon {
+  font-size: 60px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.intro-card h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.intro-card h1 span {
+  color: var(--primary-dark);
+}
+
+.intro-card p {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}

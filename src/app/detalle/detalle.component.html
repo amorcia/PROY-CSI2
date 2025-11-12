@@ -1,0 +1,23 @@
+<section class="detalle-section container">
+  <button class="btn-back" (click)="openRoute('/fotos')">← Volver</button>
+
+  <div *ngIf="isLoading()" class="loading">
+    <div class="spinner"></div>
+    <p>Cargando foto...</p>
+  </div>
+
+  <div *ngIf="!isLoading() && !hasError() && photo()" class="detalle-card">
+    <img [src]="photo()?.url || 'https://placehold.co/1200x800'" alt="Detalle foto">
+    <div class="detalle-info">
+      <h3>{{ photo()?.title || 'Sin título' }}</h3>
+      <p>ID de foto: {{ photo()?.id }}</p>
+      <p class="desc">Aquí puedes mostrar más información sobre la imagen o su contexto.</p>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading() && (hasError() || !photo())" class="error-box">
+    <h4>Error: Foto no encontrada</h4>
+    <p>El ID de la foto no es válido.</p>
+    <button class="btn-primary" (click)="openRoute('/fotos')">Volver a galería</button>
+  </div>
+</section>

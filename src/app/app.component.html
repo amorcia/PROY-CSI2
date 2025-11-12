@@ -1,0 +1,26 @@
+<header class="navbar">
+  <div class="container nav-inner">
+    <div class="nav-logo" (click)="openRoute('/inicio')">
+      <span class="logo-icon">📷</span>
+      <span class="logo-text">FotoApp</span>
+    </div>
+    <nav class="nav-menu">
+      <button class="nav-link" [class.active]="activeRoute === '/inicio'" (click)="openRoute('/inicio')">
+        Inicio
+      </button>
+      <button class="nav-link" [class.active]="activeRoute === '/fotos'" (click)="openRoute('/fotos')">
+        Galería
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; 2025 FotoApp — Aplicación Angular Amorcia</p>
+  </div>
+</footer>
